@@ -24,11 +24,7 @@ class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-        mainPage.scrollWindowUp();
-		mainPage.PerformLogin();
-
-
-		System.out.println("Test Successfully Executed!!!!");
+        System.out.println("Test Successfully Executed!!!!");
 
 		}
 

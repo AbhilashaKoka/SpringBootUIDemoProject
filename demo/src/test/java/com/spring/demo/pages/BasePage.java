@@ -33,9 +33,15 @@ public abstract class BasePage {
     }
 
 
-    public void scrollWindowUp(){
+    public void scrollWindow(){
         js=(JavascriptExecutor)webDriver;
         js.executeScript("window.scrollBy(0,300)");
+    }
+
+
+    public void scrollWindowUp(WebElement element){
+        js=(JavascriptExecutor)webDriver;
+        js.executeScript("window.scrollBy(0,300)",element);
     }
 
     public void scrollWindowDown(){

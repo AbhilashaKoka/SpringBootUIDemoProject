@@ -1,13 +1,17 @@
 package com.spring.demo.pages;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.ConfigurableBeanFactory;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
+
+import java.time.Duration;
 
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 //@ConditionalOnProperty(name="env",havingValue="qa")
-public class MainPage extends BasePage {
+public class MainPage extends BasePage{
+
     @Autowired
     private ElementPage elementPage;
 
@@ -16,13 +20,16 @@ public class MainPage extends BasePage {
 
 
 
-    public void PerformLogin() {
-        scrollWindowUp();
+
+    public void PerformLogin()  {
+        scrollWindow();
         elementPage.SubmitUsingTextBoxDetails();
     }
 
-    public void SubmitPracticeForm(){
-        scrollWindowUp();
+
+
+    public void SubmitPracticeForm() {
+        scrollWindow();
         practiceFormPage.SubmitPracticeForm( );
         practiceFormPage.HandlingModalBox();
     }

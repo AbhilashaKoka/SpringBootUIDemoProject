@@ -11,6 +11,4 @@
             <class name="com.spring.demo.runner.TestRunner"></class>
         </classes>
     </test>
-
-
 </suite>

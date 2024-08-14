@@ -69,31 +69,30 @@ public class PracticeFormPage extends BasePage{
 
 
     public void SubmitPracticeForm() {
-
-        scrollWindowUp();
+        scrollWindowUp(Frame_formFrames);
         Frame_formFrames.click();
         PracticeForms.click();
-        scrollWindowUp();
+        scrollWindowUp(InputBox_FirstName);
 
         InputBox_FirstName.sendKeys("xyz", Keys.TAB);
         InputBox_LastName.sendKeys("ABC", Keys.TAB);
         InputBox_Email.sendKeys("XYZ@gmail.com", Keys.TAB);
-        scrollWindowUp();
+        scrollWindowUp(RadioButton_Male);
 
-       if(!RadioButton_Male.isSelected()){
-           MoveToElement(RadioButton_Male);
-           RadioButton_Male.sendKeys(Keys.TAB);
+        if(!RadioButton_Male.isSelected()){
+            MoveToElement(RadioButton_Male);
+            RadioButton_Male.sendKeys(Keys.TAB);
         }
-        scrollWindowUp();
+        scrollWindowUp(Inputbox_Mobile);
 
         Inputbox_Mobile.sendKeys("90249234234", Keys.TAB);
-        scrollWindowUp();
+        scrollWindowUp(Inputbox_DateOfBirth);
 
         Inputbox_DateOfBirth.sendKeys("25 JAN 2024", Keys.TAB, Keys.ENTER, Keys.TAB);
-        scrollWindowUp();
+        scrollWindowUp(Inputbox_Subject);
 
         Inputbox_Subject.sendKeys("Computer Science",Keys.TAB, Keys.TAB);
-        scrollWindowUp();
+        scrollWindowUp(CheckBox_Hobbies);
 
         if(!CheckBox_Hobbies.isSelected()) {
             MoveToElement(CheckBox_Hobbies);
@@ -101,7 +100,7 @@ public class PracticeFormPage extends BasePage{
         }
 
         Upload_Picture.sendKeys("D:\\Users\\akoka\\Downloads\\sampleFile.jpeg");
-        scrollWindowUp();
+        scrollWindowUp(TextArea_CurrentAdress);
         TextArea_CurrentAdress.sendKeys("adafafdhdlhdgl",Keys.TAB);
         DropDown_States.sendKeys("Uttar Pradesh", Keys.TAB,Keys.TAB);
         DropDown_City.sendKeys("Agra",Keys.TAB,Keys.TAB);
@@ -111,7 +110,7 @@ public class PracticeFormPage extends BasePage{
 
     public void HandlingModalBox()
     {
-        scrollWindowUp();
+        scrollWindowUp(ModalBox);
 
         for(WebElement rows:Table_Coloumn) {
             String str1 = rows.findElement(By.xpath("td[1]")).getAttribute("innerText");
@@ -123,7 +122,7 @@ public class PracticeFormPage extends BasePage{
 
 
     }
-    }
+}
 
 
 
