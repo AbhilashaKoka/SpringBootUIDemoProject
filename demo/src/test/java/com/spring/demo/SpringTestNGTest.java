@@ -25,7 +25,6 @@ public class SpringTestNGTest extends AbstractTestNGSpringContextTests{
 
     @BeforeTest
     protected void setupWebDriver(){
-
         webDriver.navigate().to(appUrl);
     }
 
@@ -33,7 +32,13 @@ public class SpringTestNGTest extends AbstractTestNGSpringContextTests{
     public void testLogin()  {
         mainPage.scrollWindowUp();
         mainPage.PerformLogin();
-     //   mainPage.SubmitPracticeForm();
+
+    }
+
+    @Test
+    public void testFormSubmit(){
+        mainPage.scrollWindowUp();
+        mainPage.SubmitPracticeForm();
     }
 
 

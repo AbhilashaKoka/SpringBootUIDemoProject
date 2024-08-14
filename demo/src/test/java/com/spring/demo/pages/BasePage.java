@@ -19,7 +19,7 @@ public abstract class BasePage {
 
     Actions action;
 
-  WebElement element;
+    WebElement element;
 
 
     @PostConstruct

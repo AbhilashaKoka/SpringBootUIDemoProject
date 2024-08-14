@@ -6,7 +6,7 @@
 <!--    </classes>-->
 <!--    </test>-->
 
-    <test name="E2E Test Demo2">
+    <test name="E2E Test Demo">
         <classes>
             <class name="com.spring.demo.runner.TestRunner"></class>
         </classes>

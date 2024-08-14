@@ -50,7 +50,7 @@ public class ElementPage extends BasePage {
 
 
     public void SubmitUsingTextBoxDetails(){
-         scrollWindowUp();
+        scrollWindowUp();
         Element_frame.click();
         TextBox_Span.click();
         UserName.sendKeys("XYZ");
