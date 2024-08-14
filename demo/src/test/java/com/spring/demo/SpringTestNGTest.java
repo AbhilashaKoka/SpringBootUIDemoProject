@@ -36,6 +36,11 @@ public class SpringTestNGTest extends AbstractTestNGSpringContextTests{
             mainPage.SubmitPracticeForm();
     }
 
+    @Test
+    public void testUploadAndDownload() throws InterruptedException {
+        mainPage.UploadAndDownload();
+    }
+
 
     @BeforeClass(alwaysRun = true)
     @BeforeSuite(alwaysRun = true)

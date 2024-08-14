@@ -18,7 +18,8 @@ public class MainPage extends BasePage{
     @Autowired
     private PracticeFormPage practiceFormPage;
 
-
+@Autowired
+private UploadAndDownloadPage uploadAndDownloadPage;
 
 
     public void PerformLogin()  {
@@ -34,5 +35,9 @@ public class MainPage extends BasePage{
         practiceFormPage.HandlingModalBox();
     }
 
+    public void UploadAndDownload() throws InterruptedException {
+        scrollWindow();
+        uploadAndDownloadPage.HandlingUploadAndDownload();
+    }
 
 }

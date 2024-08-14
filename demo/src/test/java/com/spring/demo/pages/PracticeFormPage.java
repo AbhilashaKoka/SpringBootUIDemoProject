@@ -111,7 +111,6 @@ public class PracticeFormPage extends BasePage{
     public void HandlingModalBox()
     {
         scrollWindowUp(ModalBox);
-
         for(WebElement rows:Table_Coloumn) {
             String str1 = rows.findElement(By.xpath("td[1]")).getAttribute("innerText");
             String str2 = rows.findElement(By.xpath("td[2]")).getAttribute("innerText");
