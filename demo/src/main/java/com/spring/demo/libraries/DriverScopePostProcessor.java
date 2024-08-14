@@ -8,6 +8,6 @@ public class DriverScopePostProcessor implements BeanFactoryPostProcessor {
 
     @Override
     public void postProcessBeanFactory(ConfigurableListableBeanFactory beanFactory) throws BeansException {
-    beanFactory.registerScope("driverscope", new DriverScope());
+    beanFactory.registerScope("driverScope", new DriverScope());
     }
 }

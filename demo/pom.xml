@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -29,10 +29,12 @@
 	<properties>
 		<java.version>22</java.version>
 		<testNG.vesion>7.9.0</testNG.vesion>
+		<lombok.version>1.18.34</lombok.version>
 		<selenium.version>4.22.0</selenium.version>
 		<WebDriverManager.version>5.9.2</WebDriverManager.version>
 		<surefire.version>2.22.2</surefire.version>
 		<cucumber-version>6.10.4</cucumber-version>
+		<maven.cucumber.reporting>5.8.0</maven.cucumber.reporting>
 	</properties>
 	<dependencies>
 
@@ -67,6 +69,14 @@
 		</dependency>
 
 		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<version>${lombok.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+
+		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-java</artifactId>
 			<version>${selenium.version}</version>
@@ -99,15 +109,19 @@
 		<dependency>
 			<groupId>net.masterthought</groupId>
 			<artifactId>maven-cucumber-reporting</artifactId>
-			<version>5.8.1</version>
+			<version>${maven.cucumber.reporting}</version>
 		</dependency>
 
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
 			<artifactId>selenium-grid</artifactId>
-			<version>4.23.0</version>
+			<version>${selenium.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
 
 	</dependencies>
 	<build>
@@ -130,8 +144,8 @@
 				<version>${surefire.version}</version>
 				<configuration>
 					<includes>
-<!--						<include>com.spring.demo.SpringTestNGTest</include>-->
-						    <include>com.spring.demo.runner.TestRunner</include>
+						<!--						<include>com.spring.demo.SpringTestNGTest</include>-->
+						<include>com.spring.demo.runner.TestRunner</include>
 					</includes>
 				</configuration>
 			</plugin>
@@ -139,7 +153,7 @@
 			<plugin>
 				<groupId>net.masterthought</groupId>
 				<artifactId>maven-cucumber-reporting</artifactId>
-				<version>5.8.0</version>
+				<version>${maven.cucumber.reporting}</version>
 				<executions>
 					<execution>
 						<id>execution</id>
