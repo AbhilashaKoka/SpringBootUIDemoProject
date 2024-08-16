@@ -30,8 +30,11 @@ public class UploadAndDownloadPage  extends BasePage{
 
     public  void HandlingUploadAndDownload() throws InterruptedException {
         scrollWindow();
+        scrollWindowUp(Element_frame);
+
         Element_frame.click();
         UploadDownload_Span.click();
+
         Path pathOfDownloadFolder = Paths.get(System.getProperty("user.home") + "\\Downloads");
         if (Files.exists(pathOfDownloadFolder) && Files.isDirectory(pathOfDownloadFolder)) {
             System.out.println("Directory Exist!!");

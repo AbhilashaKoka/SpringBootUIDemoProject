@@ -41,6 +41,13 @@ public class SpringTestNGTest extends AbstractTestNGSpringContextTests{
         mainPage.UploadAndDownload();
     }
 
+    @Test
+    public void testModalDialog() throws InterruptedException {
+        mainPage.ModalDialog();
+
+
+    }
+
 
     @BeforeClass(alwaysRun = true)
     @BeforeSuite(alwaysRun = true)

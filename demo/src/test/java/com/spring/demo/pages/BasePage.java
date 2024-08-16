@@ -6,7 +6,11 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.springframework.beans.factory.annotation.Autowired;
+
+import java.time.Duration;
 
 public abstract class BasePage {
 
@@ -53,6 +57,11 @@ public abstract class BasePage {
         action= new Actions(webDriver);
         action.moveToElement(element).click().perform();
 
+    }
+
+    public void waitForElementToVisible(WebElement element){
+        WebDriverWait wait=new WebDriverWait(webDriver, Duration.ofSeconds(60));
+        wait.until(ExpectedConditions.visibilityOf(element));
     }
 
 

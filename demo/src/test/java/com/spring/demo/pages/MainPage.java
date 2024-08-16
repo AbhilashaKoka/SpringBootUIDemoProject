@@ -18,8 +18,11 @@ public class MainPage extends BasePage{
     @Autowired
     private PracticeFormPage practiceFormPage;
 
-@Autowired
-private UploadAndDownloadPage uploadAndDownloadPage;
+     @Autowired
+    private UploadAndDownloadPage uploadAndDownloadPage;
+
+    @Autowired
+    private ModalDialogPage modalDialogPage;
 
 
     public void PerformLogin()  {
@@ -38,6 +41,12 @@ private UploadAndDownloadPage uploadAndDownloadPage;
     public void UploadAndDownload() throws InterruptedException {
         scrollWindow();
         uploadAndDownloadPage.HandlingUploadAndDownload();
+    }
+
+
+    public void ModalDialog() throws InterruptedException {
+        scrollWindow();
+        modalDialogPage.HandlingModal();
     }
 
 }

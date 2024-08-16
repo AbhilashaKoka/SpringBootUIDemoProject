@@ -50,6 +50,7 @@ public class ElementPage extends BasePage {
 
 
     public void SubmitUsingTextBoxDetails(){
+        scrollWindow();
         scrollWindowUp(Element_frame);
         Element_frame.click();
         TextBox_Span.click();
