@@ -25,6 +25,10 @@ public class MainPage extends BasePage{
     private ModalDialogPage modalDialogPage;
 
 
+    @Autowired
+    private WebTablePage webTablePage;
+
+
     public void PerformLogin()  {
         scrollWindow();
         elementPage.SubmitUsingTextBoxDetails();
@@ -47,6 +51,12 @@ public class MainPage extends BasePage{
     public void ModalDialog() throws InterruptedException {
         scrollWindow();
         modalDialogPage.HandlingModal();
+    }
+
+    public void WebTableSearchByName()
+    {
+        scrollWindow();
+        webTablePage.SearchByName();
     }
 
 }

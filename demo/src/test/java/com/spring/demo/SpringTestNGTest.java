@@ -44,8 +44,12 @@ public class SpringTestNGTest extends AbstractTestNGSpringContextTests{
     @Test
     public void testModalDialog() throws InterruptedException {
         mainPage.ModalDialog();
+    }
 
 
+    @Test
+    public void testWebTable(){
+        mainPage.WebTableSearchByName();
     }
 
 
