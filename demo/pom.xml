@@ -34,7 +34,7 @@
 		<WebDriverManager.version>5.9.2</WebDriverManager.version>
 		<surefire.version>2.22.2</surefire.version>
 		<cucumber-version>6.10.4</cucumber-version>
-		<maven.cucumber.reporting>5.8.0</maven.cucumber.reporting>
+		<maven.cucumber.reporting>3.0.0</maven.cucumber.reporting>
 	</properties>
 	<dependencies>
 
@@ -177,9 +177,8 @@
 						</goals>
 						<configuration>
 							<projectName>cucumberReporting</projectName>
-							<skip>false</skip>
 							<outputDirectory>${project.build.directory}/cucumber-reports-html</outputDirectory>
-							<inputDirectory>${project.build.directory}/cucumber.json</inputDirectory>
+							<cucumberOutput>${project.build.directory}/cucumber.json</cucumberOutput>
 							<!--							<jsonFiles>-->
 							<!--								<param>**/*.json</param>-->
 							<!--							</jsonFiles>-->
