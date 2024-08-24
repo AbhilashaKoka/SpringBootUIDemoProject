@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.2</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>com.spring</groupId>
 	<artifactId>demo</artifactId>
@@ -123,6 +123,17 @@
 			<version>${selenium.version}</version>
 		</dependency>
 
+		<!--		<dependency>-->
+		<!--			<groupId>org.seleniumhq.selenium</groupId>-->
+		<!--			<artifactId>selenium-server</artifactId>-->
+		<!--			<version>${selenium.version}</version>-->
+		<!--		</dependency>-->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<scope>test</scope>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -143,10 +154,13 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>${surefire.version}</version>
 				<configuration>
-					<includes>
-						<!--						<include>com.spring.demo.SpringTestNGTest</include>-->
-						<include>com.spring.demo.runner.TestRunner</include>
-					</includes>
+					<!--					<includes>-->
+					<!--						<include>com.spring.demo.SpringTestNGTest</include>-->
+					<!--						<include>com.spring.demo.runner.TestRunner</include>-->
+					<!--					</includes>-->
+					<suiteXmlFiles>
+						<suiteXmlFile>src/test/java/com/spring/demo/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
 				</configuration>
 			</plugin>
 
@@ -165,13 +179,13 @@
 							<projectName>cucumberReporting</projectName>
 							<skip>false</skip>
 							<outputDirectory>${project.build.directory}/cucumber-reports-html</outputDirectory>
-							<inputDirectory>${project.build.directory}</inputDirectory>
-							<jsonFiles>
-								<param>**/*.json</param>
-							</jsonFiles>
-							<mergeFeaturesById>false</mergeFeaturesById>
-							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>
-							<checkBuildResult>false</checkBuildResult>
+							<inputDirectory>${project.build.directory}/cucumber.json</inputDirectory>
+							<!--							<jsonFiles>-->
+							<!--								<param>**/*.json</param>-->
+							<!--							</jsonFiles>-->
+							<!--							<mergeFeaturesById>false</mergeFeaturesById>-->
+							<!--							<mergeFeaturesWithRetest>false</mergeFeaturesWithRetest>-->
+							<!--							<checkBuildResult>false</checkBuildResult>-->
 						</configuration>
 					</execution>
 				</executions>
