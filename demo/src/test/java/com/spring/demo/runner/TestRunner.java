@@ -8,8 +8,7 @@ import org.testng.annotations.DataProvider;
         features={"D:\\Users\\akoka\\IdeaProjects\\demo\\demo\\src\\test\\java\\com\\spring\\demo\\features"},
         glue={"com.spring.demo.steps"},
         tags="not @skip_scenario",
-        plugin={"pretty","json:target/cucumber.json",
-                "html:target/cucumber-report.html",
+        plugin={"json:target/cucumber.json","pretty",
                 "rerun:target/rerun.txt"},
         publish=true
 )

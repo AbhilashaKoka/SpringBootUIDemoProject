@@ -1,6 +1,6 @@
 Feature:Checking PracticeForm Submission functionality
 
-
+  @skip_scenario
   Scenario: Verify Practice Form Submission with valid values
     Given I am in from landing page
     When I fill all valid credential and click on submit

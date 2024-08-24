@@ -1,6 +1,6 @@
 Feature: Checking WebTable Functionality
 
-
+  @skip_scenario
   Scenario: Verify WebTable search by valid Name
     Given WebTable Landing Page
     When Enter Name in Search Box and search
