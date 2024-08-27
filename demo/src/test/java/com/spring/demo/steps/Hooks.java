@@ -35,9 +35,14 @@ public class Hooks {
     @After
     public void TearDownTest(Scenario scenario) throws IOException {
         if(scenario.isFailed()){
-            File src= ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
-            FileHandler.copy(src,new File("PageScreenshot.png"));
-            System.out.println(scenario.getName());
+//            File src= ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.FILE);
+//            FileHandler.copy(src,new File("PageScreenshot.png"));
+//            System.out.println(scenario.getName());
+            final byte[] src= ((TakesScreenshot)webDriver).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(src,"image/png",scenario.getName());
+
+
+
         }
 
 
