@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 public class ModalDialogSteps {
 
-
+//Glue steps
     @Autowired
     ModalDialogPage modalDialogPage;
 
