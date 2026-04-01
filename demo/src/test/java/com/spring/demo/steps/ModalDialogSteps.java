@@ -21,7 +21,7 @@ public class ModalDialogSteps {
        modalDialogPage.HandlingModal();
 
     }
-    @Then("verify  successfully ModalDialog")
+    @Then("verify successfully ModalDialog")
     public void verify_successfully_modal_dialog() {
         System.out.println("Successfully Handles Modal Dialog!!");
     }
