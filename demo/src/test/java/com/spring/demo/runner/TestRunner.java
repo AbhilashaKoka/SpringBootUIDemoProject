@@ -5,7 +5,7 @@ import org.testng.annotations.DataProvider;
 
 
 @CucumberOptions(
-        features={"D:\\Users\\akoka\\IdeaProjects\\demo\\demo\\src\\test\\java\\com\\spring\\demo\\features"},
+        features={"src/test/java/com/spring/demo/features"},
         glue={"com.spring.demo.steps"},
         tags="not @skip_scenario",
         plugin={"json:target/cucumber.json","pretty",
