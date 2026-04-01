@@ -1,1 +1,0 @@
-UI Automation using Spring Boot and Selenium WebDriver
