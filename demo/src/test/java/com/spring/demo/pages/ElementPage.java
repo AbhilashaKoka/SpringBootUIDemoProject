@@ -53,6 +53,8 @@ public class ElementPage extends BasePage {
         scrollWindow();
         scrollWindowUp(Element_frame);
         Element_frame.click();
+        // Scroll to TextBox_Span to make it visible
+        scrollToElement(TextBox_Span);
         TextBox_Span.click();
         UserName.sendKeys("XYZ");
         Email.sendKeys("xyz@gmail.com");

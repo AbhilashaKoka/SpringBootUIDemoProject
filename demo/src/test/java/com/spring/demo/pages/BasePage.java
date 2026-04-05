@@ -64,6 +64,8 @@ public abstract class BasePage {
         wait.until(ExpectedConditions.visibilityOf(element));
     }
 
-
-
+    public void scrollToElement(WebElement element){
+        js=(JavascriptExecutor)webDriver;
+        js.executeScript("arguments[0].scrollIntoView(true);", element);
+    }
 }
