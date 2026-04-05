@@ -192,7 +192,37 @@
 					</execution>
 				</executions>
 			</plugin>
-		</plugins>
+					<plugin>
+						<groupId>org.jacoco</groupId>
+						<artifactId>jacoco-maven-plugin</artifactId>
+						<version>0.8.12</version>
+						<executions>
+							<!-- Attach JaCoCo agent during test phase -->
+							<execution>
+								<id>prepare-agent</id>
+								<goals>
+									<goal>prepare-agent</goal>
+								</goals>
+							</execution>
 
+							<!-- Generate coverage report after tests -->
+							<execution>
+								<id>report</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>report</goal>
+								</goals>
+								<configuration>
+									<!-- Where to put the XML report -->
+									<outputDirectory>${project.build.directory}/site/jacoco</outputDirectory>
+									<reports>
+										<report>xml</report>
+										<report>html</report>
+									</reports>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+		</plugins>
 	</build>
 </project>
